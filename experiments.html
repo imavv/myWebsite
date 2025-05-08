@@ -43,8 +43,7 @@
         <li><a href="../PersonalWebsite/index.html" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
         <li><a href="../PersonalWebsite/about.html"><i class="bi bi-person navicon"></i><span>About</span></a></li>
         <li><a href="../PersonalWebsite/books.html"><i class="bi bi-file-earmark-text navicon"></i><span>Books</span></a></li>
-        <li><a href="../PersonalWebsite/cooking.html"><i class="bi bi-images navicon"></i><span>Cooking</span></a></li>
-        <li><a href="../PersonalWebsite/blog.html"><i class="bi bi-hdd-stack navicon"></i><span>Blog</span></a></li>
+        <li><a href="../PersonalWebsite/experiments.html"><i class="bi bi-images navicon"></i><span>Experiments</span></a></li>
       </ul>
     </nav>
   </header>
@@ -53,45 +52,54 @@
   <main class="main">
     
     <!-- Services Section -->
-    <section id="blog">
+    <section id="books">
 
       <!-- Section Title -->
-      <div class="container">
         <div class="row justify-content-center">
           <div class="col-10 text-start">
-            <h2>My Blog</h2>
-            <p class="custom-pcolor">Occasionally, I write down what's brewing inside my head. My writing most often takes form after I'd gone on a trip somewhere, or some incidence made me reflect on something. </p>
-  
+            <h2>Tiny Experiments</h2>
+            <p class="custom-pcolor">Inspired by a book of the same title, I intend to do more tiny experiments with my life (i.e. trying new things, with an emphasis on curiosity and enjoyment, rather than narrowing my sight on a specific goal or outcome)</p>        
             <hr>
             <br>
           </div>
         </div>
-      </div><!-- End Section Title -->
 
-      <!-- Book 1 -->
-      <div class="container">
-          <div class="row align-items-center justify-content-center">
-            <div class="col-2 text-start">
-              <img src="../PersonalWebsite/assets/img/books/NeverSplitTheDifference/cover.jpeg" style="display: block; margin: auto;" class="img-fluid" alt="A photo of me" width="120">
-            </div>
-            <div class="col-8 text-start">
-              <h3 class="fs-5"><b>Seaside or Mountains?</b></h3>
-              <p class="custom-pcolor" style="font-size: 15px;">Reflecting on my hiking trip to Mount Merbabu.</p>
-            </div>
-          </div>
+      <!-- Experiment 1 -->
+      <div class="row justify-content-center">
+        <div class="col-10 text-start">
+          <h3 class="fs-6">8 May 2025</h3>
+          <h3 class="fs-5">Automating my Life in Weeks</h3>
+          <p class="custom-pcolor" style="font-size: 15px;">
+            I recently read about "Life in Weeks"<br><br>
+            It's supposed to be a visual representation (tiny squares arranged in a grid) to show how many weeks you've lived since birth and how long you've got left. The colored squares represent your life up until now, while the blank ones indicate the future weeks to come.
+            I found it really interesting and thought I could use it to foster a healthy sense of urgency in my life.<br><br>
+            So I coded a python script to automate an email sending me my own "Life in Weeks" each Monday (thanks ChatGPT!). As the days go by, it will serve as a reminder of how limited my time is on earth - and hopefully propel me to act on the important things.<br><br>
+            See more on my <a href="https://github.com/imavv/MyLifeInWeeks/tree/master" target="_blank">Github</a>.
+          </p>
+        </div>
       </div>
 
-          <br>
-          <br>
-
+      <br>
+      <br>
 
       
     </section><!-- /Services Section -->
     
   </main>
 
+
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Note card pop up -->
+  <div id="noteModal" class="note-modal-overlay" style="display: none;">
+    <div class="note-modal-content">
+      <button class="close-modal">&times;</button>
+      <button class="nav-arrow left">&larr;</button>
+      <button class="nav-arrow right">&rarr;</button>
+      <div class="note-modal-slider"></div>
+    </div>
+  </div>
 
 </body>
 </html>
