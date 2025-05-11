@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Insight Atma</title>
+  <link rel="icon" href="assets/img/favicon-owl.jpeg" type="image/png">
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Main CSS File -->
+  <link href="../assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+
+  <!-- Back button -->
+  <header id="header" class="header d-flex flex-column justify-content-center">
+    <div style="padding: 50px 0 0 50px">
+     <a href="../experiments.html">
+        <img src="../assets/img/back-arrow.png" style="max-height: 50; max-width: 50px"> 
+     </a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <main class="main">
+    
+    <!-- Services Section -->
+    <section id="books">
+
+      <!-- Section Title -->
+        <div class="row justify-content-center">
+          <div class="col-10 text-start">
+            <h2>Subscribe to your own Life In Weeks</h2>
+            <p class="custom-pcolor">To have a weekly email remind you of the silent but constant clock we call time, ticking away beneath life's surface.</p>        
+            <br>
+            
+            <form method="POST" action="/form">
+              <label for="email">Email:</label>
+              <input type="email" name="email" required><br><br>
+      
+              <label for="birthdate">Birthdate:</label>
+              <input type="date" name="birthdate" required><br><br>
+      
+              <button type="submit">Subscribe</button>
+            </form>
+            
+            {% if request.args.get('success') %}
+              <p style="color: green;">Thanks for subscribing!</p>
+            {% endif %}
+
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <img src="../assets/img/lifeinweeks.png" style="max-width: 800px; margin: 100px 0 0 100px"> 
+        </div>
+
+      <br>
+      <br>
+
+      
+    </section><!-- /Services Section -->
+    
+  </main>
+
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Note card pop up -->
+  <div id="noteModal" class="note-modal-overlay" style="display: none;">
+    <div class="note-modal-content">
+      <button class="close-modal">&times;</button>
+      <button class="nav-arrow left">&larr;</button>
+      <button class="nav-arrow right">&rarr;</button>
+      <div class="note-modal-slider"></div>
+    </div>
+  </div>
+
+</body>
+</html>

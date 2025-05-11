@@ -21,25 +21,22 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
   <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
 
 </head>
 
 <body class="index-page">
 
-  <!-- Nav bar -->
+  <!-- Back button -->
   <header id="header" class="header d-flex flex-column justify-content-center">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
-
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="index.html" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-        <li><a href="about.html"><i class="bi bi-person navicon"></i><span>About</span></a></li>
-        <li><a href="books.html"><i class="bi bi-file-earmark-text navicon"></i><span>Books</span></a></li>
-        <li><a href="experiments.html"><i class="bi bi-images navicon"></i><span>Experiments</span></a></li>
-      </ul>
-    </nav>
+    <div style="padding: 50px 0 0 50px">
+     <a href="../experiments.html">
+        <img src="../assets/img/back-arrow.png" style="max-height: 50; max-width: 50px"> 
+     </a>
+    </div>
   </header>
 
   <!-- About Section -->
@@ -51,28 +48,42 @@
       <!-- Section Title -->
         <div class="row justify-content-center">
           <div class="col-10 text-start">
-            <h2>Tiny Experiments</h2>
-            <p class="custom-pcolor">Inspired by a book of the same title, I intend to do more tiny experiments with my life (i.e. trying new things, with an emphasis on curiosity and enjoyment, rather than narrowing my sight on a specific goal or outcome)</p>        
-            <hr>
+            <h2>Subscribe to your own Life In Weeks</h2>
+            <p class="custom-pcolor">To have a weekly email remind you of the silent but constant clock we call time, ticking away beneath life's surface.</p>        
             <br>
+            
+            <form action="/form" method="POST">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Birth date</label>
+                <input type="date" class="form-control">
+              </div>
+              <!-- <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              </div> -->
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+            <!-- <form method="POST" action="/subscribe">
+              <label>Email:</label><br>
+              <input type="email" name="email" required><br><br>
+          
+              <label>Birthdate:</label><br>
+              <input type="date" name="birthdate" required><br><br>
+          
+              <input type="submit" value="Subscribe">
+            </form> -->
           </div>
         </div>
 
-      <!-- Experiment 1 -->
-      <div class="row justify-content-center">
-        <div class="col-10 text-start">
-          <h3 class="fs-6">8 May 2025</h3>
-          <h3 class="fs-5">Automating my Life in Weeks</h3>
-          <p class="custom-pcolor" style="font-size: 15px;">
-            I recently read about "Life in Weeks"<br><br>
-            It's a visual representation (tiny squares arranged in a grid) showing how many weeks you've lived since birth and how long you've got left. The colored squares represent your life up until now, while the blank ones indicate the future weeks to come.
-            I found it really interesting and thought I could use it to foster a healthy sense of urgency in my life.<br><br>
-            So I coded a python script to automate an email sending me my own "Life in Weeks" each Monday (thanks ChatGPT!). As the days go by, it will serve as a reminder of how limited my time is on earth - and hopefully propel me to act on the important things.<br><br>
-            See more <a href="templates/subscribe.html">here</a>
-            <!-- See more on my <a href="https://github.com/imavv/MyLifeInWeeks/tree/master" target="_blank">Github</a> -->
-          </p>
+        <div class="row justify-content-center">
+            <img src="../assets/img/lifeinweeks.png" style="max-width: 800px; margin: 100px 0 0 100px"> 
         </div>
-      </div>
 
       <br>
       <br>
